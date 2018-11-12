@@ -1,0 +1,42 @@
+{{outlet}}
+<div class="row">
+    <div class="row result">
+        Rapid Cash
+    </div>
+    <div class="container">
+        <div class="account-wall">
+              <form class="form-signin">
+        <div class="col-sm-9 col-xs-9" align="center">
+            <div><img src="assets/Image/rapid.png" class="image-circle"/></div>
+              <h2 style="color:black" > Hi {{name}} </h2>
+              
+          
+             <div class="left-half">
+              <label  class="col-sm-2 control-label"for="name"> Employee ID : {{employeeId}} </label><br><br><br>
+                
+              <label  class="col-sm-2 control-label"for="name"> Employee Name : {{employeeName}} </label><br><br><br>  
+              
+              <!--<label  class="col-sm-2 control-label"for="name"> Wallet Detail : {{WalletDetail}} </label><br><br><br>-->
+               
+               <button class="open" style="margin-left: 188px;font-size: x-large"  id="myBtn" {{action "wallet"}} > Wallet Detail </button>
+
+               </div>
+        <div class="right-half">
+   
+            <label  class="col-sm-2 control-label"for="name"> Designation : {{designation}} </label><br><br><br>
+
+            <label  class="col-sm-2 control-label"for="name"> Project Manager :{{projectManager}} </label><br><br><br>
+
+            <label  class="col-sm-2 control-label"for="name"> Current Project :{{currentProject}} </label><br>
+
+  </div>
+
+              </div>
+             
+    </form>
+
+         </div>
+
+    </div>
+</div> 
+ 

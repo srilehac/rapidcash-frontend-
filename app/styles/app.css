@@ -1,0 +1,692 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+.table>thead>tr>th{
+    color: black !important;
+}
+.table>tbody>tr>td{
+    color: black !important;
+}
+
+/*thead, tbody { display: block; }*/
+
+tbody {
+    height: 50px;       /* Just for the demo          */
+    overflow-y: auto;    /* Trigger vertical scroll    */
+}
+.result{
+    font-size: 30px;
+    background-color: #7e82be ;
+    color: #ffffff ;
+    text-align: center;
+    padding: 15px;
+    font-weight: 700;
+}
+
+.tableAlign{
+    margin-top: 35px;
+}
+
+body{
+    background-color: #2B2B2B;
+}
+
+*{
+    font-family: 'Raleway', sans-serif;
+    color : #FFF;
+
+}
+
+
+div h3 span{
+    color : #FFF;
+    font-size:14px;
+}
+
+div span {
+    font-weight: 200;
+}
+
+h1{
+    font-weight: 200;
+}
+
+.login_box{
+    background: #f32d27; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    /* background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjUlIiBzdG9wLWNvbG9yPSIjZjMyZDI3IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTklIiBzdG9wLWNvbG9yPSIjZmY2YjQ1IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==); */
+    /* background: -moz-linear-gradient(45deg,  #f32d27 5%, #ff6b45 99%); FF3.6+ */
+    /* background: -webkit-gradient(linear, left bottom, right top, color-stop(5%,#f32d27), color-stop(99%,#ff6b45)); Chrome,Safari4+ */
+    /* background: -webkit-linear-gradient(45deg,  #f32d27 5%,#ff6b45 99%); Chrome10+,Safari5.1+ */
+    /* background: -o-linear-gradient(45deg,  #f32d27 5%,#ff6b45 99%); Opera 11.10+ */
+    /* background: -ms-linear-gradient(45deg,  #f32d27 5%,#ff6b45 99%); IE10+ */
+    /* background: linear-gradient(45deg,  #f32d27 5%,#ff6b45 99%); W3C */
+    /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f32d27', endColorstr='#ff6b45',GradientType=1 ); IE6-8 fallback on horizontal gradient */
+
+    width:100%;
+    /* height:70%; */
+   margin-top: 35px;
+
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.54);
+    -moz-box-shadow:    0px 0px 8px 0px rgba(50, 50, 50, 0.54);
+    box-shadow:         0px 0px 8px 0px rgba(50, 50, 50, 0.54);
+}
+
+@media (max-width: 767px) {
+    .login_box{
+        background: #f32d27; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        /* background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjUlIiBzdG9wLWNvbG9yPSIjZjMyZDI3IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTklIiBzdG9wLWNvbG9yPSIjZmY2YjQ1IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+        /* background: -moz-linear-gradient(45deg,  #f32d27 5%, #ff6b45 99%); FF3.6+ */
+        /* background: -webkit-gradient(linear, left bottom, right top, color-stop(5%,#f32d27), color-stop(99%,#ff6b45)); Chrome,Safari4+ */
+        /* background: -webkit-linear-gradient(45deg,  #f32d27 5%,#ff6b45 99%); Chrome10+,Safari5.1+ */
+        /* background: -o-linear-gradient(45deg,  #f32d27 5%,#ff6b45 99%); Opera 11.10+ */
+        /* background: -ms-linear-gradient(45deg,  #f32d27 5%,#ff6b45 99%); IE10+ */
+        /* background: linear-gradient(45deg,  #f32d27 5%,#ff6b45 99%); W3C */
+        /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f32d27', endColorstr='#ff6b45',GradientType=1 ); IE6-8 fallback on horizontal gradient */ 
+
+        /* width:90%;
+        height:80%;
+        position:absolute;
+        top:10%;
+        left:5%;
+
+        -webkit-box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.54);
+        -moz-box-shadow:    0px 0px 8px 0px rgba(50, 50, 50, 0.54);
+        box-shadow:         0px 0px 8px 0px rgba(50, 50, 50, 0.54); */
+    }
+}
+
+.image-circle {
+    border-radius: 560%;
+    width: 164px;
+    height: 175px;
+    border: -25px solid #FFF;
+    margin: 12px;
+    background-color: #FFFFFF;
+    margin-right: 5px;
+}
+
+.h2{
+    margin-right: -524px;
+    color: black;
+}
+
+.follow{
+    background-color:#FC563B;
+    height: 80px;
+    cursor:pointer;
+}
+
+.follow:hover {
+    background-color:#F22F26;
+    height: 80px;
+    cursor:pointer;
+}
+
+.login_control{
+    background-color:#FFF;
+    padding:10px;
+
+}
+
+.control {
+    color:#000;
+    margin:10px;
+}
+
+.label {
+    color: #EB4F26;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.form-control{
+    color: #000000 !important;
+    font-size: 25px;
+    border: none;
+    padding: 25px;
+    padding-left: 10px;
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 10px;
+    outline: none;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.form-control:focus{
+    border-radius: 0px;
+    border-bottom: 1px solid #FC563B;
+    margin-bottom: 10px;
+    outline: none;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.btn-orange{
+    background-color: #FC563B;
+    border-radius: 0px;
+    margin: 5px;
+    padding: 5px;
+    width: 150px;
+    font-size: 20px;
+    font-weight: inherit;
+}
+
+.btn-orange:hover {
+    background-color: #F22F26;
+    border-radius: 0px;
+    margin: 5px;
+    padding: 5px;
+    width: 150px;
+    font-size: 20px;
+    font-weight: inherit;
+    color:rgb(15, 14, 14) !important;
+}
+
+.line{
+    border-bottom : 2px solid #F32D27;
+}
+
+
+
+.row{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.vote{
+    text-align: center;
+    text-decoration: underline;
+}
+.panelTex{
+    color: #ffffff !important;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 700;
+}
+.ico{
+    font-size: 80px;
+    text-align: center;
+    color: #006400 ;
+}
+.icowo{
+    font-size: 80px;
+    text-align: center;
+    color: #00008b ;
+}
+.icotr{
+    font-size: 80px;
+    text-align: center;
+    color: #ff0000 ;
+}
+.men{
+    background-color: #f32d27 !important;
+}
+.women{
+    background-color: #f32d27 !important;
+}
+.transgender{
+    background-color: #f32d27 !important;
+}
+
+.tableFont{
+    color: #000000 !important;
+}
+.valid{
+    font-size: 20px;
+    color: #006400;
+    text-align: left;
+}
+.invalid{
+    font-size: 20px;
+    color: #ff0000;
+    text-align: left;
+}
+.validxl{
+    font-size: 30px;
+    color: #006400;
+    text-align: left;
+}
+.invalidxl{
+    font-size: 30px;
+    color: #ff0000;
+    text-align: left;
+}
+.notch{
+    font-size: 12px !important;
+}
+.form-signin
+{
+    max-width: 330px;
+    padding:  60px;
+    margin: 0 auto;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox
+{
+    margin-bottom: 10px;
+}
+.form-signin .checkbox
+{
+    font-weight: normal;
+}
+.form-signin .form-control
+{
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-signin .form-control:focus
+{
+    z-index: 2;
+}
+.form-signin input[type="text"]
+{
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"]
+{
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.account-wall
+{
+    margin-top: 20px;
+    padding: 40px 0px 20px 0px;
+    background-color: #f7f7f7;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.login-title
+{
+    color: #555;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+}
+.profile-img
+{
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.need-help
+{
+    margin-top: 10px;
+}
+.new-account
+{
+    display: block;
+    margin-top: 10px;
+}
+.login-title
+{
+    color:#ffffff;
+}
+.col-sm-2 
+{
+    color: black;
+}
+
+.btn-block
+{
+    color:black;
+}
+
+.col-md-9{
+    background-color: #7e82be;
+}
+
+.th{
+    color: black;
+}
+
+/*container*/
+/* Pen-specific styles */
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 1.25rem;
+    font-family: sans-serif;
+    line-height: 150%;
+    text-shadow: 0 2px 2px #b6701e;
+  }
+  
+  section {
+    color: #fff;
+    text-align: center;
+  }
+  
+  div {
+    height: 100%;
+  }
+  
+ 
+  
+  h1 {
+    font-size: 1.75rem;
+    margin: 0 0 0.75rem 0;
+  }
+  
+  /* Pattern styles */
+  .container {
+    display: table;
+    width: 100%;
+  }
+  
+  .left-half {
+    background-color: #f7f7f7;
+    position: absolute;
+    left: 8px;
+    width: 50%;
+    height:305px;
+  }
+  
+  .right-half {
+    background-color: #f7f7f7;
+    position: absolute;
+    right: 8px;
+    width: 68%;
+    height:305px;
+  }
+  
+  .wallet{
+   color : black;
+   
+  }
+
+   /*pop-up*/
+
+    .center {
+    margin: auto;
+    width: 60%;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   }
+
+   .hideform {
+    display: none;
+   }
+
+
+   /*pop-up alternative test*/
+
+html{
+  font-family: "Helvetica Neue", sans-serif;
+  width:100%;
+  color:#666666;
+  text-align:center;
+}
+
+.popup-overlay{
+  /*Hides pop-up when there is no "active" class*/
+  visibility:hidden;
+  position: fixed;
+  background:#ffffff;
+  border:3px solid #666666;
+  width:50%;
+  height:50%;
+  left:25%; 
+  margin-top: -45px;
+}
+.popup-overlay.active{
+  /*displays pop-up when "active" class is present*/
+  visibility:visible;
+  text-align:center;
+}
+
+.popup-content {
+  /*Hides pop-up content when there is no "active" class */
+ visibility:hidden;
+}
+
+.popup-content.active {
+  /*Shows pop-up content when "active" class is present */
+  visibility:visible;
+}
+
+button{
+  display:inline-block;
+  vertical-align:middle;
+  border-radius:30px;
+  margin:.20rem;
+  font-size: 1rem;
+  color:#666666;
+  background:   #ffffff;
+  border:1px solid #666666;  
+}
+
+button:hover{
+  border:1px solid #666666;
+  background:#666666;
+  color:#ffffff;
+}
+
+
+name{
+    color: black;
+}
+
+
+/*pop up test2*/
+
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+  }
+  
+  /* The popup form - hidden by default */
+  .form-popup {
+    bottom: 20px;
+    right: 510px;
+    border: 3px solid #f1f1f1;
+    z-index: 182;
+    margin-bottom: -210px;
+    margin-top: -248px;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+
+
+
+  /*Modal*/
+
+  table{
+    font-family:'Calibri';
+    font-size:15px;
+    background-color:#fff;
+    color:#333;
+}
+.modal-header{
+    background-color:#333;
+    color:#fff;
+}
+
+
+
+/*sample test*/
+
+/*body {font-family: Arial, Helvetica, sans-serif;}
+
+
+
+/* The Modal (background) */
+
+/*.modal {
+
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+
+    top: 0;
+
+    width: 100%; 
+
+    height: 100%; 
+    overflow: auto; /
+    background-color: rgb(0,0,0); 
+
+    background-color: rgba(0,0,0,0.4); 
+}
+
+/* Modal Content 
+
+.modal-content {
+
+    background-color: #fefefe;
+
+    margin: auto;
+
+    padding: 20px;
+
+    border: 1px solid #888;
+
+    width: 53%;
+
+    height: 210px;
+
+}
+
+/* The Close Button 
+
+.close {
+
+    color: #aaaaaa;
+
+    float: right;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+}
+.close:hover,
+
+.close:focus {
+
+    color: #000;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+}*/
+
+
+/*modal(sample file)*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    height:70%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 30px;
+    margin: .20rem;
+    font-size: 1rem;
+    color: #666666;
+    background: #ffffff;
+    border: 1px solid #666666;
+    margin-right: 210px;
+}

@@ -1,0 +1,92 @@
+{{outlet}}
+
+<div class="row">
+<div class="row result">
+     Rapid Cash
+</div>
+<div class="container"><br>
+    <h1><center>Wallet Detail</center></h1>
+<div class="account-wall">
+ 
+      <form class="form-signin">
+
+        <div class="col-sm-9 col-xs-9" align="center">
+           
+<div class="left-half">
+        
+        
+             <label  class="col-sm-2 control-label"for="name">Balance :{{result}}</label><br><br><br>
+
+            <!--<input type="text"  class="form-control"  placeholder="" value=id><br><br>
+
+              <input class="text" name="wallet"/><br><br><br>--> 
+
+
+ <button class="open" style="margin-left: 198px" onclick="openForm()" id="myBtn" {{action "reimburse"}} > Reimburse </button>
+
+            
+               </div>
+
+
+        <div class="right-half">
+   
+            <label  class="col-sm-2 control-label"for="name">Awarded For :{{reason}} </label><br><br><br>
+      
+            <label  class="col-sm-2 control-label"for="name">Amount :{{amount}}</label><br><br><br>
+
+       </div> 
+
+
+<div id="myModal" class="modal">
+
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+ <form action="/action_page.php" id="myForm" >
+       
+         <label class="col-sm-2 control-label" for="name"> Amount </label><br><br><br>
+
+        {{input type="text"  id="value" class="form-control"  placeholder="amount" position="fixed" }}<br><br><br>
+
+      <button class="close" type="submit" id="text_value" {{action "submit"}} > Submit </button>
+
+      </form>
+  </div>
+
+</div>
+
+
+</div>
+
+</form>
+
+</div>
+</div>
+</div>
+
+
+<script>
+
+var modal = document.getElementById('myModal');
+
+
+var btn = document.getElementById("myBtn");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>

@@ -1,0 +1,140 @@
+{{outlet}}
+
+<div class="row">
+<div class="row result">
+     Rapid Cash
+</div>
+<div class="container"><br>
+    <h1><center>Wallet Detail</center></h1>
+<div class="account-wall">
+ 
+      <form class="form-signin">
+
+        <div class="col-sm-9 col-xs-9" align="center">
+           
+<div class="left-half">
+        
+        
+             <label  class="col-sm-2 control-label"for="name">Balance :{{result}}</label><br><br><br>
+
+            <!--<input type="text"  class="form-control"  placeholder="" value=id><br><br>
+
+              <input class="text" name="wallet"/><br><br><br>--> 
+
+
+ <button class="open"  id="myBtn" {{action "reimburse"}} > Reimburse </button>
+
+            
+               </div>
+
+
+        <div class="right-half">
+   
+            <label  class="col-sm-2 control-label"for="name">Awarded For :{{reason}} </label><br><br><br>
+      
+            <label  class="col-sm-2 control-label"for="name">Amount :{{amount}}</label><br><br><br>
+
+       </div>  
+
+
+<div id="myModal" class="modal">
+
+  <div class="modal-content">
+
+<div class="popup-overlay">
+   
+    <div class="popup-content">
+        <form action="/action_page.php" id="myForm" >
+       
+         <label class="col-sm-2 control-label" for="name"> Amount </label><br><br><br>
+
+        {{input type="text"  id="value" class="form-control"  placeholder="amount" position="fixed" }}<br><br><br>
+
+            <!--<input  type="text"  placeholder="amount" position="fixed" ><br><br><br>-->
+
+      <button class="close" type="submit" id="text_value" {{action "submit"}} > Submit </button>
+      <button type="button" class="btn cancel" onclick="closeForm()" > Close </button>
+      </form>
+
+      </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+
+
+              </div>     
+    </form>
+</div>
+
+ 
+
+   </div>
+   </div>
+ 
+   
+
+<script>
+
+$(".open").on("click", function(){
+    
+  
+     //document.getElementById("myForm").style.display = "block";
+     
+$(".popup-overlay, .popup-content").addClass("active");
+
+
+});
+
+//removes the "active" class to .popup and .popup-content when the "Close" button is clicked 
+$(".close, .popup-overlay").on("click", function(){
+  $(".popup-overlay, .popup-content").removeClass("active");
+ document.getElementById("myForm").style.display = "none";
+});
+
+</script>
+
+<!--<script>
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+}
+</script>-->
+
+
+
+<!--<script>
+
+var modal = document.getElementById('myModal');
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+
+    modal.style.display = "block";
+
+}
+
+span.onclick = function() {
+
+    modal.style.display = "none";
+
+}
+window.onclick = function(event) {
+
+    if (event.target == modal) {
+
+        modal.style.display = "none";
+    }
+
+}
+
+</script>-->
