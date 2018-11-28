@@ -13,10 +13,9 @@ Router.map(function() {
   this.route('first');
   this.route('wallet');
   this.route('test');
-  this.route('test2');
-  this.route('test3');
-  this.route('ex');
   this.route('sample');
+  this.route('test.hbs');
+  this.route('stream.hbs');
 });
 
 export default Router;

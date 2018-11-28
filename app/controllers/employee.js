@@ -6,31 +6,29 @@ export default Controller.extend({
             this.transitionToRoute('wallet');
         },
 
-            employee:function(){
+                /*employee:function(){
                 var mycontroller=this
                 
                  return $.ajax({   
-                 url:'http://localhost:4200/employee',
+                 url:'http://localhost:8081/employeedetail',
                  type: 'Get',
                  headers: {
-                   'Accept': 'application/json',
-                   'Content-Type': 'application/json',
-                   'x-access-token': "token"
+                   //'Accept'      : 'application/json',
+                   //'Content-Type': 'application/json',
+                     'employeeId'  : 'id'
                },
-                 contentType: 'application/json',
-                 success: function(response) {
-                 console.log(JSON.stringify(response));
-                 var message = response.message;
-                 mycontroller.set('message',message)
-                 var token=response.token
-                 mycontroller.set('token',token)
-                 swal(message, "Thank you", "success");
-                 console.log("token>>>>>>>>>>" + token);  
-                 console.log("message>>>>>>>>>>" + message);  
+               contentType: 'application/json',
+               data: JSON.stringify(transactionstring),
+               success: function(Response) {
+               console.log(JSON.stringify(Response));
+               var result = Response.result;
+               console.log('result', result);
+               //swal(''+result+'');
+               
                  }
                })
                 
-            }
+            }*/
         }
     
     });

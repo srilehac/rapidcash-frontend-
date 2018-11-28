@@ -11,7 +11,7 @@ export default Controller.extend({
              headers: {
                'Accept': 'application/json',
                'Content-Type': 'application/json',
-               'x-access-token': "token"
+              // 'x-access-token': "token"
            },
              success: function(response) {
              console.log(JSON.stringify(response));
